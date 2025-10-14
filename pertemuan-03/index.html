@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>judul halaman</title>
+    <style>
+        #about {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 700px;
+            margin: 20px auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
+        }
+    </style>
 </head>
 
 <body>
@@ -37,14 +47,16 @@
             <h2>kontak kami</h2>
             <form action="" method="get">
                 <label for="txtNama">Nama:</label>
-                <input type="text" id="txtNama" name="txtName" placheholder="Masukkan nama" required autocomplete="name">
-                
+                <input type="text" id="txtNama" name="txtName" placheholder="Masukkan nama" required
+                    autocomplete="name">
+
                 <label for="txtEmail">Email:</label>
-                <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email">
-                
+                <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required
+                    autocomplete="email">
+
                 <label for="txtPesan">Pesan:</label>
                 <textarea name="txtPesan" id="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
-                
+
                 <button type="submit">Kirim</button>
                 <button type="reset">Batal</button>
             </form>
