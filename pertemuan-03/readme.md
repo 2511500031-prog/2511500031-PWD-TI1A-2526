@@ -4,3 +4,5 @@ NAMA : NUR FADILLAH<br><br>
 hari ini, 08 oktober 2025 saya mempelajari :
 <ol>
 <li>menggunakan file emmet.html pertemuan-02 untuk file index.html pertemuan-03</li>
+<li>membuat struktur form untuk section contact</li>
+</ol>
