@@ -8,5 +8,5 @@ hari ini, 08 oktober 2025 saya mempelajari :
 <li>membuat styling untuk selector id#about</li>
 <li>membuat styling untuk selector id#about elemen h2</li>
 <li>membuat styling untuk selector id#about elemen p</li>
-
+<li>membuat styling untuk selector id#about elemen strong</li>
 </ol>
