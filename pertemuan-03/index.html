@@ -35,7 +35,7 @@
         #about strong {
             min-width: 180px;
             color: #003366;
-            font-weight:600;
+            font-weight: 600;
             text-align: left;
             padding-right: 16px;
             flex-shrink: 0;
@@ -46,11 +46,43 @@
                 flex-direction: column;
                 align-items: flex-start;
             }
-             #about strong {
+
+            #about strong {
                 text-align: left;
                 padding-right: 0;
                 margin-bottom: 2px;
-             }
+            }
+        }
+
+        #contact {
+            background-color: cadetblue;
+            width: 700px;
+            margin: 10px auto;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        #contact h2 {
+            font-size: 25px;
+            border-bottom: 2px solid white;
+        }
+
+        #contact label {
+            color:white;
+        }
+
+        #contact button {
+            background-color: black;
+            color: white;
+        }
+
+        #contact input {
+            border-radius: 15px;
+            border: none;
+        }
+
+        #contact textarea {
+            border-radius: 15px;
         }
     </style>
 </head>
@@ -85,8 +117,7 @@
             <h2>kontak kami</h2>
             <form action="" method="get">
                 <label for="txtNama">Nama:</label>
-                <input type="text" id="txtNama" name="txtName" placheholder="Masukkan nama" required
-                    autocomplete="name">
+                <input type="text" id="txtNama" name="txtName" placeholder="Masukkan nama" required autocomplete="name">
 
                 <label for="txtEmail">Email:</label>
                 <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required
