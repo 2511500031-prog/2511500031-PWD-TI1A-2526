@@ -44,15 +44,23 @@
         }
 
         @media (max-width: 600px) {
-            #about p {
+            #about p,
+            #contact label {
                 flex-direction: column;
                 align-items: flex-start;
             }
 
-            #about strong {
+            #about strong,
+            #contact label>span{
                 text-align: left;
                 padding-right: 0;
                 margin-bottom: 2px;
+            }
+
+            #contact input,
+            #contact textarea,
+            #contact button {
+                width: 100%;
             }
         }
 
@@ -108,12 +116,12 @@
 
         <section id="about">
             <h2>tentang kami</h2>
-            <p><strong>NIM</strong>2511500031</p>
-            <p><strong>NAMA LENGKAP</strong>NUR FADILLAH</p>
-            <p><strong>TEMPAT LAHIR</strong>DESA KAPIT KACAMATAN PARITTIGA KABUPATEN BANGKA BARAT</p>
-            <p><strong>HOBI</strong>MENDENGARKAN MUSIK</p>
-            <p><strong>PACAR</strong>TIDAK ADA</p>
-            <p><strong>NAMA ORANG TUA</strong>ALM TASRIB DAN SUYANTI</p>
+            <p><strong>NIM:</strong>2511500031</p>
+            <p><strong>NAMA LENGKAP:</strong>NUR FADILLAH</p>
+            <p><strong>TEMPAT LAHIR:</strong>DESA KAPIT KACAMATAN PARITTIGA KABUPATEN BANGKA BARAT</p>
+            <p><strong>HOBI:</strong>MENDENGARKAN MUSIK</p>
+            <p><strong>PACAR:</strong>TIDAK ADA</p>
+            <p><strong>NAMA ORANG TUA:</strong>ALM TASRIB DAN SUYANTI</p>
         </section>
 
         <section id="contact">
