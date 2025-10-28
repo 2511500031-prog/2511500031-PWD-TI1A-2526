@@ -1,75 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>judul halaman</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <title>Tugas PWD Pertemuan 5</title>
+    <link rel="stylesheet" href="style.css" </head>
 
 <body>
     <header>
-        <h1>ini header</h1>
-        <button class="menu-toggle"arial-label="toggle navigation">
+        <h1>Ini header</h1>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
             &#9776;
         </button>
         <nav>
             <ul>
-                <li><a href="#home">beranda</a></li>
-                <li><a href="#about">tentang</a></li>
-                <li><a href="#contact">kontak</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="home">
-            <h2>selamat datang &#128512</h2>
-            <p>ini contoh paragraf HTML.</p>
+            <h2>welcome to my website</h2>
+            <p>Ini contoh paragraf html saya.</p>
         </section>
 
         <section id="about">
-            <h2>tentang kami</h2>
-            <p><strong>NIM:</strong>2511500031</p>
-            <p><strong>NAMA LENGKAP:</strong>NUR FADILLAH</p>
-            <p><strong>TEMPAT LAHIR:</strong>DESA KAPIT KACAMATAN PARITTIGA KABUPATEN BANGKA BARAT</p>
-            <p><strong>HOBI:</strong>MENDENGARKAN MUSIK</p>
-            <p><strong>PACAR:</strong>TIDAK ADA</p>
-            <p><strong>NAMA ORANG TUA:</strong>ALM TASRIB DAN SUYANTI</p>
+            <h2>Tentang Saya</h2>
+            <p><strong>NIM:</strong> 2511500031</p>
+            <p><strong>Nama Lengkap:</strong> nur fadillah </p>
+            <p><strong>Tempat Lahir:</strong> desa kapit</p>
+            <p><strong>Tanggal Lahir:</strong> 22 september 2006</p>
+            <p><strong>Hobi:</strong> mendengarkan musik</p>
+            <p><strong>Pasangan:</strong> Tidak ada</p>
+            <p><strong>Pekerjaan:</strong> Mahasiswa di ISB Atma Luhur prodi Teknik Informatika</p>
+            <p><strong>Nama Orang Tua:</strong> Bapak tasrib dan ibu suyanti</p>
+            <p><strong>Nama Kakak:</strong> saprudin dan hijasi</p>
         </section>
 
-        <section id="contact">
-            <h2>kontak kami</h2>
-            <form action="" method="get">
+<section id="contact">
+            <h2>Kontak Kami</h2>
+            <form action="" method="GET">
                 <label for="txtNama">
                     <span>Nama:</span>
-                    <input type="text" id="txtNama" name="txtName" placeholder="Masukkan nama" required
-                        autocomplete="name">
+                    <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">
                 </label>
 
                 <label for="txtEmail">
-                    <span>Email</span>
-                    <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required
-                        autocomplete="email">
+                    <span>Email:</span>
+                    <input type="text" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email">
                 </label>
 
                 <label for="txtPesan">
                     <span>Pesan:</span>
-                    <textarea name="txtPesan" id="txtPesan" rows="4" placeholder="Tulis pesan anda..."
-                        required></textarea>
+                    <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
+                    <small id="charCount">0/200 karakter</small>
                 </label>
 
                 <div class="button">
-                    <button type="submit">Kirim</button>
                     <button type="reset">Batal</button>
+                    <button type="submit">Kirim</button>
                 </div>
             </form>
-        </section>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 NUR FADILLAH [2511500031]</p>
+        <p>&copy; 2025 Nur fadillah [2511500031]</p>
     </footer>
 
     <script src="script.js"></script>
