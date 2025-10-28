@@ -104,6 +104,12 @@ header li a:active {
     cursor: pointer;
 }
 @media (max-width: 600px) {
+    .menu-toggle {
+        display: bock;
+        position:absolute;
+        left :16px;
+        top: 8px;
+    }
     header {
         padding: 16px;
         position: sticky;
