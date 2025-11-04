@@ -13,4 +13,5 @@ belajar:
 <li>latihan operator dasar</li>
 <li>latihan operator pembanding</li>
 <li>latihan struktur kontrol percabangan</li>
+<li>latihan struktur kontrol perulangan dan array<li>
 <ol>
