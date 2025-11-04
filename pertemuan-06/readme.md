@@ -12,4 +12,5 @@ belajar:
 <li>latihan komentar/remark</li>
 <li>latihan operator dasar</li>
 <li>latihan operator pembanding</li>
+<li>latihan struktur kontrol percabangan</li>
 <ol>
