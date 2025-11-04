@@ -16,4 +16,5 @@ belajar:
 <li>latihan struktur kontrol perulangan dan array<li>
 <li>latihan array dan penggunaan print_r() dan var_dump()<li>
 <li>latihan struktur kontrol perulangan dengan for<li>
+<li>latihan infinite loop<li>
 <ol>
