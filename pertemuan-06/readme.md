@@ -14,4 +14,5 @@ belajar:
 <li>latihan operator pembanding</li>
 <li>latihan struktur kontrol percabangan</li>
 <li>latihan struktur kontrol perulangan dan array<li>
+<li>latihan array dan penggunaan print_r() dan var_dump()<li>
 <ol>
