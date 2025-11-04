@@ -8,4 +8,5 @@ belajar:
 <li>hallo,dunia php</li>
 <li>nama saya nur fadillah</li>
 <li>latihan variabel dan tipe data</li>
+<li>latihan konstanta</li>
 <ol>
