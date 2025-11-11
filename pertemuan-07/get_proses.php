@@ -1,7 +1,7 @@
 <?php
 session_start();
-$_session["nama"] = $_GET["txtnama"];
-$_session["email"] = $_GET["txtemail"];
-$_session["pesan"] = $_GET["txtpesan"];
+$_SESSION["nama"] = $_GET["txtnama"];
+$_SESSION["email"] = $_GET["txtemail"];
+$_SESSION["pesan"] = $_GET["txtpesan"];
 header ( "location: get.php");
 ?>
