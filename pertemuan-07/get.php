@@ -1,8 +1,9 @@
 <?php
 session_start() 
-$sesname = $_session["nama"];
-$sesemail = $_session["email"];
-$sespesan = $_session["pesan"];
+$sesname = $_SESSION["nama"];
+$sesemail = $_SESSION["email"];
+$sespesan = $_SESSION
+["pesan"];
 echo "$sesname $sesemail $sespesan";
 ?>
 
