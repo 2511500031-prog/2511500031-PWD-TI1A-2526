@@ -23,7 +23,7 @@ endif;
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Judul Halaman</title>
+  <title>pendaftaran profil pengunjung</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -51,9 +51,62 @@ endif;
       ?>
       <p>Ini contoh paragraf HTML.</p>
     </section>
+    
+    <section id="form_profil">
+      <h2>pendaftaran profil pengunjung</h2>
+      <form action="form_profil_proses.php" method="POST">
 
-    <section id="about">
+      <label for="nim">
+        <span>NIM : </span>
+        <input type="text" id="nim" placeholder="tulis nim anda"required autocomplete="nim"></input>
+</label>
+
+  <label for="nama lengkap">
+        <span>nama lengkap : </span>
+        <input type="text" id="nama lengkap" placeholder=" tulis nama anda"required autocomplete="nama lengkap"></input>
+</label>
+
+<label for="tempat lahir">
+        <span>tempat lahir : </span>
+        <input type="text" id="tempat lahir" placeholder=" tulis tempat lahir anda"required autocomplete="tempat lahir"></input>
+</label>
+
+<label for="tanggal lahir">
+        <span>tanggal lahir : </span>
+        <input type="text" id="tanggal lahir" placeholder=" tulis tanggal lahir anda"required autocomplete="tanggal lahir"></input>
+</label>
+
+<label for="hobi">
+        <span>hobi : </span>
+        <input type="text" id="hobi" placeholder=" tulis hobi anda"required autocomplete="hobi"></input>
+</label>
+
+<label for="pasangan">
+        <span>pasangan: </span>
+        <input type="text" id="pasangan" placeholder=" tulis pasangan anda"required autocomplete="pasangan"></input>
+</label>
+
+<label for="pekerjaan">
+        <span>pekerjaan: </span>
+        <input type="text" id="pekerjaan" placeholder=" tulis pekerjaan anda"required autocomplete="pekerjaan"></input>
+</label>
+
+<label for="nama orang tua">
+        <span>nama orang tua: </span>
+        <input type="text" id="nama orang tua" placeholder=" tulis nama orang tua anda"required autocomplete="nama orang tua"></input>
+</label>
+
+<label for="nama kakak">
+        <span>nama kakak: </span>
+        <input type="text" id="nama kakak" placeholder=" tulis nama kakak anda"required autocomplete="nama kakak"></input>
+</label>
+
+<label for="nama adik">
+        <span>nama adik: </span>
+        <input type="text" id="nama adik" placeholder=" tulis nama adik anda"required autocomplete="nama adik"></input>
+</label>
       <?php
+
       $nim = 2511500010;
       $NIM = '0344300002';
       $nama = "Say'yid Abdullah";
@@ -81,7 +134,7 @@ endif;
       <p><strong>Nama Adik:</strong> <?php echo $sespesan ?></p>
     </section>
 
-    <section id="contact">
+    <section id="form_profil">
       <h2>Kontak Kami</h2>
       <form action="proses.php" method="POST">
 
