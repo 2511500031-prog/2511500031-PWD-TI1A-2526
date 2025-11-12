@@ -11,7 +11,6 @@ $_SESSION["sespekerjaan"] = $sespekerjaan;
 $_SESSION["sesortu"] = $sesortu;
 $_SESSION["seskakak"] = $seskakak;
 $_SESSION["sesadik"] = $sesadik;
-
 header("location: index.php");
 }
 ?>

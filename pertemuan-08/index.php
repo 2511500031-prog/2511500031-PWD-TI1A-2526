@@ -105,6 +105,8 @@ endif;
         <span>nama adik: </span>
         <input type="text" id="nama adik" placeholder=" tulis nama adik anda"required autocomplete="nama adik"></input>
 </label>
+        <button type="submit">Kirim</button>
+        <button type="reset">Batal</button>
       <?php
 
       $nim = 2511500010;
