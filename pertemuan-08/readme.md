@@ -9,4 +9,5 @@ Kelompok: TI1A<br>
 Proses saya mengerjakan UTS ini sebagai berikut:<br>
 <ol>
   <li>form pendaftaran profil pengunjung</li>
+  <li>menambahkan session</li>
 </ol>
