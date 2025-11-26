@@ -1,7 +1,5 @@
 # pertemuan-09
-nama : nur fadillah <br>
-nim : 2511500031 <br>
-<br><br>
+
 <ol>
   <li>Hasil UTS untuk bahan pertemuan-09</li>
   <li>Membuat form untuk biodata sederhana mahasiswa</li>
@@ -13,5 +11,13 @@ nim : 2511500031 <br>
   <li>tangkap session dari file proses selesai</li>
   <li>echo session ke nilai label section contact</li>
   <li>echo session ke nilai label section contact selesai</li>
-  <li>mengubah array diproses.php</li>
+  
+</ol>
+
+nama : nur fadillah <br>
+nim : 2511500031 <br>
+<br><br>
+<ol>
+<li>menyalin file dosen dari elearning</li>
+<li>mengubah array doproses php</li>
 </ol>
