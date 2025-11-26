@@ -13,4 +13,5 @@ nim : 2511500031 <br>
   <li>tangkap session dari file proses selesai</li>
   <li>echo session ke nilai label section contact</li>
   <li>echo session ke nilai label section contact selesai</li>
+  <li>mengubah array diproses.php</li>
 </ol>
