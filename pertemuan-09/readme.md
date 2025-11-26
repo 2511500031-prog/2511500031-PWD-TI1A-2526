@@ -20,5 +20,6 @@ nim : 2511500031 <br>
 <ol>
 <li>menyalin file dosen dari elearning</li>
 <li>mengubah array doproses php</li>
-<li>menambah session biodata diproses php</li>
+ <li>menambah session biodata diproses php</li>
+ <li>mengganti kode sebelum section about </li>
 </ol>
