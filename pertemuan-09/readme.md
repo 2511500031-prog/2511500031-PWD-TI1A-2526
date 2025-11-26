@@ -28,4 +28,5 @@ Hari ini, Rabu 26 november 2025<br>
  <li>menambahkan file fungsi.php</li>
  <li>menambahkan kode pembersihan</li>
  <li>menambahkan format tanggal di fungsi.php</li>
+ <li>menambahkan kode biodata di fungsi.php</li>
 </ol>
