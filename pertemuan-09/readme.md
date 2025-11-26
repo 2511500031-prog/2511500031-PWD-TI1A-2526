@@ -17,6 +17,7 @@
 nama : nur fadillah <br>
 nim : 2511500031 <br>
 <br><br>
+Hari ini, Rabu 26 november 2025<br>
 <ol>
 <li>menyalin file dosen dari elearning</li>
 <li>mengubah array doproses php</li>
