@@ -123,7 +123,7 @@ endif;
       <?php foreach ($fieldConfig as $kunci => $metadata): ?>
     <p>
         <strong><?= $metadata["label"] ?></strong>
-        <?= htmlspecialchars(string : $biodata[$kunci] ?? "") ?>
+        <?= htmlspecialchars(string: $biodata[$kunci] ?? "") ?>
         <?= $metadata["suffix"] ?>
     </p>
 <?php endforeach; ?>
