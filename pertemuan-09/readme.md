@@ -24,4 +24,5 @@ Hari ini, Rabu 26 november 2025<br>
  <li>menambah session biodata diproses php</li>
  <li>mengganti kode sebelum section about </li>
  <li>menambahkan baris kode baru setelah baris h2</li>
+ <li>menghapus bari 130-140</li>
 </ol>
