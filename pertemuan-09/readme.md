@@ -26,4 +26,5 @@ Hari ini, Rabu 26 november 2025<br>
  <li>menambahkan baris kode baru setelah baris h2</li>
  <li>menghapus bari 130-140</li>
  <li>menambahkan file fungsi.php</li>
+ <li>menambahkan kode pembersihan</li>
 </ol>
