@@ -1,6 +1,8 @@
 <?php
 session_start();
-require_once __DIR__ . '/fungsi.php';
+
+require_once _DIR_ . '/fungsi.php';
+
 $sesnama = "";
 if (isset($_SESSION["sesnama"])):
   $sesnama = $_SESSION["sesnama"];
@@ -92,14 +94,13 @@ endif;
           <input type="text" id="txtNmKakak" name="txtNmKakak" placeholder="Masukkan Nama Kakak" required>
         </label>
 
-        <label for="txtNmAdik"><span>Nama Adik:</span>
+         <label for="txtNmAdik"><span>Nama Adik:</span>
           <input type="text" id="txtNmAdik" name="txtNmAdik" placeholder="Masukkan Nama Adik" required>
         </label>
 
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
       </form>
-
     </section>
 
     <?php
@@ -107,20 +108,21 @@ endif;
 
     $fieldConfig = [
       "nim" => ["label" => "NIM:", "suffix" => ""],
-      "nama" => ["label" => "Nama Lengkap:", "suffix" => " &#128526;"],
+      "nama" => ["label" => "Nama Lengkap:", "suffix" => ""],
       "tempat" => ["label" => "Tempat Lahir:", "suffix" => ""],
       "tanggal" => ["label" => "Tanggal Lahir:", "suffix" => ""],
-      "hobi" => ["label" => "Hobi:", "suffix" => " &#127926;"],
-      "pasangan" => ["label" => "Pasangan:", "suffix" => " &hearts;"],
-      "pekerjaan" => ["label" => "Pekerjaan:", "suffix" => " &copy; 2025"],
+      "hobi" => ["label" => "Hobi:", "suffix" => ""],
+      "pasangan" => ["label" => "Pasangan:", "suffix" => ""],
+      "pekerjaan" => ["label" => "Pekerjaan:", "suffix" => ""],
       "ortu" => ["label" => "Nama Orang Tua:", "suffix" => ""],
       "kakak" => ["label" => "Nama Kakak:", "suffix" => ""],
       "adik" => ["label" => "Nama Adik:", "suffix" => ""],
     ];
     ?>
+
     <section id="about">
       <h2>Tentang Saya</h2>
-      <?= tampilkanBiodata(conf: $fieldConfig, arr: $biodata)?>
+      <?= tampilkanBiodata($fieldConfig, $biodata); ?>
     </section>
 
     <section id="contact">
@@ -145,8 +147,7 @@ endif;
       </form>
 
       <?php if (!empty($sesnama)): ?>
-        <br>
-        <hr>
+        <br><hr>
         <h2>Yang menghubungi kami</h2>
         <p><strong>Nama :</strong> <?php echo $sesnama ?></p>
         <p><strong>Email :</strong> <?php echo $sesemail ?></p>
