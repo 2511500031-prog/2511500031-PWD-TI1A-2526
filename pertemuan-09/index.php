@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once _DIR_ . '/fungsi.php';
+require_once __DIR__ . '/fungsi.php';
 
 $sesnama = "";
 if (isset($_SESSION["sesnama"])):
