@@ -1,1 +1,8 @@
 # pertemuan-10
+NAMA : NUR FADILLAH<br>
+NIM : 2511500031<br>
+<br><br>
+Hari ini,rabu 3 desember 2025 mempelajari:<br>
+<ol>
+<li> memindahkan file dosen dari elearning</li>
+</ol>
