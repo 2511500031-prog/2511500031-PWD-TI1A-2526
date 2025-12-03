@@ -8,4 +8,5 @@ Hari ini,rabu 3 desember 2025 mempelajari:<br>
 <li>menambahkan file koneksi.php</li>
 <li>menambahkan kode di koneksi.php</li>
 <li>mendowload file phpmyadmin</li>
+<li>mengisi database name diphpmyadmin</li>
 </ol>
