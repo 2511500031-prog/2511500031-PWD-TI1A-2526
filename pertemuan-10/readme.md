@@ -7,4 +7,5 @@ Hari ini,rabu 3 desember 2025 mempelajari:<br>
 <li> memindahkan file dosen dari elearning</li>
 <li>menambahkan file koneksi.php</li>
 <li>menambahkan kode di koneksi.php</li>
+<li>mendowload file phpmyadmin</li>
 </ol>
