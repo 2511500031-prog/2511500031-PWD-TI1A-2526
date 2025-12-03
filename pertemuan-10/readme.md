@@ -5,4 +5,5 @@ NIM : 2511500031<br>
 Hari ini,rabu 3 desember 2025 mempelajari:<br>
 <ol>
 <li> memindahkan file dosen dari elearning</li>
+<li>menambahkan kode di koneksi.php</li>
 </ol>
