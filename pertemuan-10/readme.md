@@ -10,4 +10,5 @@ Hari ini,rabu 3 desember 2025 mempelajari:<br>
 <li>mendowload file phpmyadmin</li>
 <li>mengisi database name diphpmyadmin</li>
 <li>membuat tabel tbl_tamu</li>
+<li>mengisi kode di read.php</li>
 </ol>
