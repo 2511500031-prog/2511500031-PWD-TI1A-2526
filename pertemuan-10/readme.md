@@ -12,4 +12,5 @@ Hari ini,rabu 3 desember 2025 mempelajari:<br>
 <li>membuat tabel tbl_tamu</li>
 <li>mengisi kode di read.php</li>
 <li>membuka alamat dilocalhost</li>
+<li>mengaktifkan database db_pwd2025 dan tabel tbl_tamu</li>
 </ol>
