@@ -15,4 +15,5 @@ Hari ini,rabu 3 desember 2025 mempelajari:<br>
 <li>mengaktifkan database db_pwd2025 dan tabel tbl_tamu</li>
 <li> pengisian data atau record untuk tabel tbl_tamu</li>
 <li> melihat hasil pengisian record (insert) dengan mengklik tab Browse.</li>
+<li>Duplikat file read.php, dan hasil duplikat rename menjadi read_inc.php</li>
 </ol>
