@@ -17,4 +17,5 @@ Hari ini,rabu 3 desember 2025 mempelajari:<br>
 <li> melihat hasil pengisian record (insert) dengan mengklik tab Browse.</li>
 <li>Duplikat file read.php, dan hasil duplikat rename menjadi read_inc.php</li>
 <li>Modif kode pada read_inc.php</li>
+<li>ganti baris 146 di file index.php</li>
 </ol>
