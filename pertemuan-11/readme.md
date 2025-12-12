@@ -5,4 +5,5 @@ NIM : 2511500031<br>
 Hari ini,rabu 3 desember 2025 mempelajari:<br>
 <ol>
 <li>memindahkan hasil pertemuan 10 untuk bahan pertemuan 11</li>
+<li>Update fungsi.php untuk helper redirect sederhana</li>
 </ol>
