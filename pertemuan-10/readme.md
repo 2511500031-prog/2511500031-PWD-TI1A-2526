@@ -2,7 +2,7 @@
 NAMA : NUR FADILLAH<br>
 NIM : 2511500031<br>
 <br><br>
-Hari ini,rabu 10 desember 2025 mempelajari:<br>
+Hari ini,rabu 3desember 2025 mempelajari:<br>
 <ol>
 <li> memindahkan file dosen dari elearning</li>
 <li>menambahkan file koneksi.php</li>
