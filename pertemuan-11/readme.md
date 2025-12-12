@@ -8,4 +8,5 @@ Hari ini,rabu 3 desember 2025 mempelajari:<br>
 <li>Update fungsi.php untuk helper redirect sederhana</li>
 <li>memastikan  form #contact menggunakan method="post" dan action="proses.php"</li>
 <li>menambah penangkap pesan sukses/gagal flash message dari SESSION</li>
+<li>menambahkan kode Tampilkan flash message</li>
 </ol>
