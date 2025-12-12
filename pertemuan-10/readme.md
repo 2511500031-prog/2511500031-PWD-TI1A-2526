@@ -18,4 +18,5 @@ Hari ini,rabu 3 desember 2025 mempelajari:<br>
 <li>Duplikat file read.php, dan hasil duplikat rename menjadi read_inc.php</li>
 <li>Modif kode pada read_inc.php</li>
 <li>ganti baris 146 di file index.php</li>
+<li>menghapus baris 133 sampai 141</li>
 </ol>
