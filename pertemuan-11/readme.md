@@ -9,4 +9,5 @@ Hari ini,rabu 3 desember 2025 mempelajari:<br>
 <li>memastikan  form #contact menggunakan method="post" dan action="proses.php"</li>
 <li>menambah penangkap pesan sukses/gagal flash message dari SESSION</li>
 <li>menambahkan kode Tampilkan flash message</li>
+<li>menampilkan  nilai lama dari form untuk antisipasi jika error, pengguna cukup mengubah data yang sudah ada </li>
 </ol>
