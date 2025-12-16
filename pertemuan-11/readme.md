@@ -13,5 +13,6 @@ Hari ini,rabu 3 desember 2025 mempelajari:<br>
 <li>Cek REQUEST_METHOD apakah menggunakan 'POST'</li>
 <li>Ambil data $_POST, trim, htmlspecialchars</li>
 <li>menambah kode Validasi</li>
+<li>menambahkan field baru di tabel tbl_tamu </li>
 
 </ol>
