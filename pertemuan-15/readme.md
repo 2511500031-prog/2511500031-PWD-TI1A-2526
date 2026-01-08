@@ -10,5 +10,6 @@ HARI INI, 7 JANUARI telah <br>
 <li>mencopy paste file.read php menjadi read_biodata.php</li>
 <li>mengganti flash_sukses menjadi flash_sukses_biodata</li>
 <li>mengganti flash_error menjadi flash error_biodata</li>
+<li>mengganti variabel kontak menjadi variabel sesuai tabel bioadata</li>
 
 </ol>
