@@ -5,5 +5,5 @@ HARI INI, 7 JANUARI telah <br>
 <br>
 <ol>
 <li> memindahkan file dosen ke pertemuan 15</li>
-
+<li>membuat tabel biodata di phpmyadmin</li>
 </ol>
