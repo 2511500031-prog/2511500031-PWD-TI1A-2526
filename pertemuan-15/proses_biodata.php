@@ -56,7 +56,7 @@ if ($bkakak === '') {
 if ($badik === '') {
   $errors_biodata[] = 'adik wajib diisi.';
 }
-if (mb_strlen($nama) < 3) {
+if (mb_strlen($bnama) < 3) {
   $errors_biodata[] = 'Nama minimal 3 karakter.';
 }
 
@@ -73,9 +73,9 @@ if (!empty($errors_biodata)) {
     'hobi' => $bhobi,
     'pekerjaan' => $bpekerjaan,
     'pasangan' => $bpasangan,
+    'orang_tua' => $borang_tua,
     'kakak' => $bkakak,
     'adik' => $badik,
-    
   ];
 
   $_SESSION['flash_error_biodata'] = implode('<br>', $errors_biodata);
@@ -83,7 +83,7 @@ if (!empty($errors_biodata)) {
 }
 
 #menyiapkan query INSERT dengan prepared statement
-$sql = "INSERT INTO tbl_biodata (bnim, bnama, btempat_tinggal, btanggal_lahir, bhobi, bpekerjaan, bpasangan, bkakak, badik) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?,)";
+$sql = "INSERT INTO tabel_biodata (bnim, bnama, btempat_tinggal, btanggal_lahir, bhobi, bpekerjaan, bpasangan, bkakak, badik) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?,)";
 $stmt = mysqli_prepare($conn, $sql);
 
 if (!$stmt) {
@@ -100,10 +100,16 @@ if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old_biodata value, b
   redirect_ke('index.php#biodata'); #pola PRG: kembali ke form / halaman home
 } else { #jika gagal, simpan kembali old_biodata value dan tampilkan error umum
   $_SESSION['old_biodata'] = [
-    'nama'  => $nama,
-    'email' => $email,
-    'pesan' => $pesan,
-    'captcha' => $captcha,
+    'nim'  => $bnim,
+    'nama' => $bnama,
+    'tempat_tinggal' => $btempat_tinggal,
+    'tanggal_lahir' => $btanggal_lahir,
+    'hobi' => $bhobi,
+    'pekerjaan' => $bpekerjaan,
+    'pasangan' => $bpasangan,
+    'orang_tua' => $borang_tua,
+    'kakak' => $bkakak,
+    'adik' => $badik,
   ];
   $_SESSION['flash_error_biodata'] = 'Data gagal disimpan. Silakan coba lagi.';
   redirect_ke('index.php#biodata');

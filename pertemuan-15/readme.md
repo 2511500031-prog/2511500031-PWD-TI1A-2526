@@ -16,4 +16,6 @@ HARI INI, 7 JANUARI telah <br>
 <li>menambahkan old menjadi old_biodata</li>
 <li>menambahkan isi old biodata<li>
 <li>mengganti mysqli_stmt_bind_param sesuai biodata</li>
+<li>mengupdate index.php</li>
+<li>mengupdate session old biodata</li>
 </ol>
