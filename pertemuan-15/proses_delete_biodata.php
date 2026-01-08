@@ -9,8 +9,8 @@
   ]);
 
   if (!$bid) {
-    $_SESSION['flash_error_biodata'] = 'bid Tidak Valid.';
-    redirect_ke('read.php');
+    $_SESSION['flash_error_biodata'] = 'BID Tidak Valid.';
+    redirect_ke('read_biodata.php');
   }
 
   /*
@@ -31,7 +31,7 @@
 
   if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value
     /*
-      Redirect balik ke read.php dan tampilkan info sukses.
+      Redirect balik ke read_biodata.php dan tampilkan info sukses.
     */
     $_SESSION['flash_sukses_biodata'] = 'Terima kasih, data Anda sudah dihapus.';
   } else { #jika gagal, simpan kembali old value dan tampilkan error umum
