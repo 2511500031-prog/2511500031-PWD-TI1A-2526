@@ -25,4 +25,9 @@ HARI INI, 7 JANUARI telah <br>
 <li>menyisipkan read_inc_biodata di index.php</li>
 <li>mengcopy paste edit.php menjadi edit_biodata.php</li>
 <li>mengganti cid menjadi bid</li>
+<li>mengupdate row sesuai biodata di edit_biodata</li>
+<li>mengupdate old sesuai biodata di edit_biodata</li>
+<li>copas from biodata dan ganti nama</li>
+<li>mengganti read.php diread_biodata.php menjadi read_biodata.php </li>
+<li>menganti proses_update.php menjadi proses_update_biodata.php</li>
 </ol>
