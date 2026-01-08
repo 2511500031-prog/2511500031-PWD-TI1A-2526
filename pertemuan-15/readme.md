@@ -31,4 +31,5 @@ HARI INI, 7 JANUARI telah <br>
 <li>mengganti read.php diread_biodata.php menjadi read_biodata.php </li>
 <li>menganti proses_update.php menjadi proses_update_biodata.php</li>
 <li>mengupdate isi di proses_update_biodata.php</li>
+<li>mengganti proses_delete.php menjadi proses_delete_biodata.php</li>
 </ol>
