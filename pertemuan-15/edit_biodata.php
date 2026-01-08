@@ -30,19 +30,19 @@
     mengirim penanda error.
   */
   if (!$bid) {
-    $_SESSION['flash_error'] = 'Akses tidak valid.';
-    redirect_ke('read.php');
+    $_SESSION['flash_error_biodata'] = 'Akses tidak valid.';
+    redirect_ke('read_biodata.php');
   }
 
   /*
     Ambil data lama dari DB menggunakan prepared statement, 
     jika ada kesalahan, tampilkan penanda error.
   */
-  $stmt = mysqli_prepare($conn, "SELECT bid, cnama, cemail, cpesan 
-                                    FROM tbl_tamu WHERE bid = ? LIMIT 1");
+  $stmt = mysqli_prepare($conn, "SELECT bid, bnim, bnama, btempat_tinggal, btanggal_lahir, bhobi, bpekerjaan, bpasangan, borang_tua, bkakak, badik
+                                    FROM tabel_biodata WHERE bid = ? LIMIT 1");
   if (!$stmt) {
-    $_SESSION['flash_error'] = 'Query tidak benar.';
-    redirect_ke('read.php');
+    $_SESSION['flash_error_biodata'] = 'Query tidak benar.';
+    redirect_ke('read_biodata.php');
   }
 
   mysqli_stmt_bind_param($stmt, "i", $bid);
@@ -52,23 +52,38 @@
   mysqli_stmt_close($stmt);
 
   if (!$row) {
-    $_SESSION['flash_error'] = 'Record tidak ditemukan.';
-    redirect_ke('read.php');
+    $_SESSION['flash_error_biodata'] = 'Record tidak ditemukan.';
+    redirect_ke('read_biodata.php');
   }
 
   #Nilai awal (prefill form)
-  $nama  = $row['cnama'] ?? '';
-  $email = $row['cemail'] ?? '';
-  $pesan = $row['cpesan'] ?? '';
+  
+      $bnim  = $row["bnim"]  ?? '';
+      $bnama =$row["bnama"] ?? '';
+      $btempat_tinggal =$row["btempat_tinggal"] ?? '';
+      $btanggal_lahir =$row["btanggal_lahir"] ?? '';
+      $bhobi = $row["bhobi"] ?? '';
+      $bpekerjaan= $row["bpekerjaan"] ?? '';
+      $bpasangan= $row["bpasangan"] ?? '';
+      $borang_tua = $row["borang_tua"] ??'';
+      $bkakak = $row["bkakak"] ?? '';
+      $badik = $row["badik"] ?? '';
 
   #Ambil error dan nilai old input kalau ada
-  $flash_error = $_SESSION['flash_error'] ?? '';
-  $old = $_SESSION['old'] ?? [];
-  unset($_SESSION['flash_error'], $_SESSION['old']);
-  if (!empty($old)) {
-    $nama  = $old['nama'] ?? $nama;
-    $email = $old['email'] ?? $email;
-    $pesan = $old['pesan'] ?? $pesan;
+  $flash_error_biodata = $_SESSION['flash_error_biodata'] ?? '';
+  $old_biodata = $_SESSION['old_biodata'] ?? [];
+  unset($_SESSION['flash_error_biodata'], $_SESSION['old_biodata']);
+  if (!empty($old_biodata)) {
+    $bnim  = $old_biodata['nim'] ?? $bnim;
+    $bnama = $old_biodata['nama'] ?? $bnama;
+    $btempat_tinggal =$old_biodata['tempat_tinggal'] ?? $btempat_tinggal;
+      $btanggal_lahir =$old_biodata['tanggal_lahir'] ?? $btanggal_lahir;
+      $bhobi = $old_biodata['hobi'] ?? $bhobi;
+      $bpekerjaan= $old_biodata['pekerjaan'] ?? $bpekerjaan;
+      $bpasangan= $old_biodata['pasangan'] ?? $bpasangan;
+      $borang_tua = $old_biodata['orang_tua'] ?? $borang_tua;
+      $bkakak = $old_biodata['kakak'] ?? $bkakak;
+      $badik = $old_biodata['adik'] ?? $badik;
   }
 ?>
 
@@ -96,46 +111,67 @@
     </header>
 
     <main>
-      <section id="contact">
-        <h2>Edit Buku Tamu</h2>
-        <?php if (!empty($flash_error)): ?>
-          <div style="padding:10px; margin-bottom:10px; 
-            background:#f8d7da; color:#721c24; border-radius:6px;">
-            <?= $flash_error; ?>
-          </div>
-        <?php endif; ?>
-        <form action="proses_update.php" method="POST">
+    <section id="biodata">
+      <h2>Biodata Sederhana Mahasiswa</h2>
 
-          <input type="text" name="bid" value="<?= (int)$bid; ?>">
+      <?php if (!empty($flash_sukses_biodata)): ?>
+        <div style="padding:10px; margin-bottom:10px; background:#d4edda; color:#155724; border-radius:6px;">
+          <?= $flash_sukses_biodata; ?>
+        </div>
+      <?php endif; ?>
 
-          <label for="txtNama"><span>Nama:</span>
-            <input type="text" id="txtNama" name="txtNamaEd" 
-              placeholder="Masukkan nama" required autocomplete="name"
-              value="<?= !empty($nama) ? $nama : '' ?>">
-          </label>
+      <?php if (!empty($flash_error_biodata)): ?>
+        <div style="padding:10px; margin-bottom:10px; background:#f8d7da; color:#721c24; border-radius:6px;">
+          <?= $flash_error_biodata; ?>
+        </div>
+      <?php endif; ?>
 
-          <label for="txtEmail"><span>Email:</span>
-            <input type="email" id="txtEmail" name="txtEmailEd" 
-              placeholder="Masukkan email" required autocomplete="email"
-              value="<?= !empty($email) ? $email : '' ?>">
-          </label>
+      <form action="proses_biodata.php" method="POST">
 
-          <label for="txtPesan"><span>Pesan Anda:</span>
-            <textarea id="txtPesan" name="txtPesanEd" rows="4" 
-              placeholder="Tulis pesan anda..." 
-              required><?= !empty($pesan) ? $pesan : '' ?></textarea>
-          </label>
+        <label for="txtNim"><span>NIM:</span>
+          <input type="text" id="txtNim" name="txtNimEd" placeholder="Masukkan NIM" required value="<?= isset($old_biodata['nim']) ? htmlspecialchars($old_biodata['nim']) : '' ?>">
+        </label>
 
-          <label for="txtCaptcha"><span>Captcha 2 x 3 = ?</span>
-            <input type="number" id="txtCaptcha" name="txtCaptcha" 
-              placeholder="Jawab Pertanyaan..." required>
-          </label>
+        <label for="txtNmLengkap"><span>Nama Lengkap:</span>
+          <input type="text" id="txtNmLengkap" name="txtNmLengkapEd" placeholder="Masukkan Nama Lengkap" required value="<?= isset($old_biodata['nama']) ? htmlspecialchars($old_biodata['nama']) : '' ?>">
+        </label>
 
-          <button type="submit">Kirim</button>
-          <button type="reset">Batal</button>
-          <a href="read.php" class="reset">Kembali</a>
-        </form>
-      </section>
+        <label for="txtT4Lhr"><span>Tempat Lahir:</span>
+          <input type="text" id="txtT4Lhr" name="txtT4LhrEd" placeholder="Masukkan Tempat Lahir" required value="<?= isset($old_biodata['tempat_tinggal']) ? htmlspecialchars($old_biodata['tempat_tinggal']) : '' ?>">
+        </label>
+
+        <label for="txtTglLhr"><span>Tanggal Lahir:</span>
+          <input type="text" id="txtTglLhr" name="txtTglLhrEd" placeholder="Masukkan Tanggal Lahir" required value="<?= isset($old_biodata['tanggal_lahir']) ? htmlspecialchars($old_biodata['tanggal_lahir']) : '' ?>">
+        </label>
+
+        <label for="txtHobi"><span>Hobi:</span>
+          <input type="text" id="txtHobi" name="txtHobiEd" placeholder="Masukkan Hobi" required value="<?= isset($old_biodata['hobi']) ? htmlspecialchars($old_biodata['hobi']) : '' ?>">
+        </label>
+
+        <label for="txtPasangan"><span>Pasangan:</span>
+          <input type="text" id="txtPasangan" name="txtPasanganEd" placeholder="Masukkan Pasangan" required value="<?= isset($old_biodata['pasangan']) ? htmlspecialchars($old_biodata['pasangan']) : '' ?>">
+        </label>
+
+        <label for="txtKerja"><span>Pekerjaan:</span>
+          <input type="text" id="txtKerja" name="txtKerjaEd" placeholder="Masukkan Pekerjaan" required value="<?= isset($old_biodata['pekerjaan']) ? htmlspecialchars($old_biodata['pekerjaan']) : '' ?>">
+        </label>
+
+        <label for="txtNmOrtu"><span>Nama Orang Tua:</span>
+          <input type="text" id="txtNmOrtu" name="txtNmOrtuEd" placeholder="Masukkan Nama Orang Tua" required value="<?= isset($old_biodata['orang_tua']) ? htmlspecialchars($old_biodata['orang_tua']) : '' ?>">
+        </label>
+
+        <label for="txtNmKakak"><span>Nama Kakak:</span>
+          <input type="text" id="txtNmKakak" name="txtNmKakakEd" placeholder="Masukkan Nama Kakak" required value="<?= isset($old_biodata['kakak']) ? htmlspecialchars($old_biodata['kakak']) : '' ?>">
+        </label>
+
+        <label for="txtNmAdik"><span>Nama Adik:</span>
+          <input type="text" id="txtNmAdik" name="txtNmAdikEd" placeholder="Masukkan Nama Adik" required value="<?= isset($old_biodata['adik']) ? htmlspecialchars($old_biodata['adik']) : '' ?>">
+        </label>
+
+        <button type="submit">Kirim</button>
+        <button type="reset">Batal</button>
+      </form>
+    </section>
     </main>
 
     <script src="script.js"></script>
