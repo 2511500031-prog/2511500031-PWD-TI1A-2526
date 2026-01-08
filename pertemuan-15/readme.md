@@ -18,4 +18,5 @@ HARI INI, 7 JANUARI telah <br>
 <li>mengganti mysqli_stmt_bind_param sesuai biodata</li>
 <li>mengupdate index.php</li>
 <li>mengupdate session old biodata</li>
+<li>mengcopy paste read_inc</li>
 </ol>

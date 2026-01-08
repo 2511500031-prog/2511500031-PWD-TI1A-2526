@@ -83,7 +83,7 @@ if (!empty($errors_biodata)) {
 }
 
 #menyiapkan query INSERT dengan prepared statement
-$sql = "INSERT INTO tabel_biodata (bnim, bnama, btempat_tinggal, btanggal_lahir, bhobi, bpekerjaan, bpasangan, bkakak, badik) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?,)";
+$sql = "INSERT INTO tabel_biodata (bnim, bnama, btempat_tinggal, btanggal_lahir, bhobi, bpekerjaan, bpasangan, borang_tua, bkakak, badik) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 $stmt = mysqli_prepare($conn, $sql);
 
 if (!$stmt) {
