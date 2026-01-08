@@ -75,9 +75,9 @@ if (mb_strlen($bnama) < 3) {
   kondisi di bawah ini hanya dikerjakan jika ada error, 
   simpan nilai lama dan pesan error, lalu redirect (konsep PRG)
   */
-  if (!empty($errors)) {
+  if (!empty($errors_biodata)) {
     $_SESSION['old_biodata'] = [
-      'nim'  => $bnim,
+    'nim'  => $bnim,
     'nama' => $bnama,
     'tempat_tinggal' => $btempat_tinggal,
     'tanggal_lahir' => $btanggal_lahir,
@@ -89,7 +89,7 @@ if (mb_strlen($bnama) < 3) {
     'adik' => $badik,
     ];
 
-    $_SESSION['flash_error_biodata'] = implode('<br>', $errors);
+    $_SESSION['flash_error_biodata'] = implode('<br>', $errors_biodata);
     redirect_ke('edit_biodata.php?bid='. (int)$bid);
   }
 
@@ -98,7 +98,7 @@ if (mb_strlen($bnama) < 3) {
     menyiapkan query UPDATE dengan prepared statement 
     (WAJIB WHERE bid = ?)
   */
-  $stmt = mysqli_prepare($conn, "UPDATE tabel_biodata                                SET cnama = ?, cemail = ?, cpesan = ? 
+  $stmt = mysqli_prepare($conn, "UPDATE tabel_biodata SET bnim = ?, bnama = ?, btempat_tinggal = ?, btanggal_lahir = ?, bhobi = ?, bpekerjaan = ?, bpasangan = ?, borang_tua = ?, bkakak = ?, badik = ?
                                 WHERE bid = ?");
   if (!$stmt) {
     #jika gagal prepare, kirim pesan error (tanpa detail sensitif)

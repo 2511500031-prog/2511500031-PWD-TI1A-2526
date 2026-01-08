@@ -32,4 +32,5 @@ HARI INI, 7 JANUARI telah <br>
 <li>menganti proses_update.php menjadi proses_update_biodata.php</li>
 <li>mengupdate isi di proses_update_biodata.php</li>
 <li>mengganti proses_delete.php menjadi proses_delete_biodata.php</li>
+<li>tambah readonly di form nim</li>
 </ol>

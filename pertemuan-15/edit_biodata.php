@@ -130,7 +130,8 @@
         <input type="text" name="bid" value="<?= (int)$bid; ?>">
 
         <label for="txtNim"><span>NIM:</span>
-          <input type="text" id="txtNim" name="txtNimEd" placeholder="Masukkan NIM" required value="<?= !empty($bnim) ? $bnim : '' ?>">
+          <input type="text" id="txtNim" name="txtNimEd" placeholder="Masukkan NIM" required readonly value="<?= !empty($bnim) ? $bnim : '' ?>">
+        </label>
 
         <label for="txtNmLengkap"><span>Nama Lengkap:</span>
           <input type="text" id="txtNmLengkap" name="txtNmLengkapEd" placeholder="Masukkan Nama Lengkap" required value="<?= !empty($bnama) ? $bnama : '' ?>">
@@ -162,6 +163,7 @@
 
         <label for="txtNmKakak"><span>Nama Kakak:</span>
           <input type="text" id="txtNmKakak" name="txtNmKakakEd" placeholder="Masukkan Nama Kakak" required value="<?= !empty($bkakak) ? $bkakak : '' ?>">
+        </label>
 
         <label for="txtNmAdik"><span>Nama Adik:</span>
           <input type="text" id="txtNmAdik" name="txtNmAdikEd" placeholder="Masukkan Nama Adik" required value="<?= !empty($badik) ? $badik: '' ?>">
