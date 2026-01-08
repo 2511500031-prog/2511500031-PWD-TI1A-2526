@@ -20,5 +20,6 @@ HARI INI, 7 JANUARI telah <br>
 <li>mengupdate session old biodata</li>
 <li>mengcopy paste read_inc</li>
 <li>rename read_inc menjadi read_inc_biodata</li>
-<li>mengupdate fieldBiodata di index.php</li>
+<li>mengupdate fieldBiodata di read inc_biodata.php</li>
+<li>mengupdate arrBiodata di read inc_biodata.php</li>
 </ol>

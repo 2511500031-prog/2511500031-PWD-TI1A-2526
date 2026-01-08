@@ -37,7 +37,7 @@ if (!$q) {
 
 
     ];
-    echo tampilkanBiodata($fieldContact, $arrContact);
+    echo tampilkanBiodata($fieldBiodata, $arrBiodata);
   }
 }
 ?>
