@@ -15,5 +15,5 @@ HARI INI, 7 JANUARI telah <br>
 <li>mengganti nama form sesuai biodata</li>
 <li>menambahkan old menjadi old_biodata</li>
 <li>menambahkan isi old biodata<li>
-
+<li>mengganti mysqli_stmt_bind_param sesuai biodata</li>
 </ol>
