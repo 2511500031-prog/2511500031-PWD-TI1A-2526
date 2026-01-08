@@ -22,4 +22,6 @@ HARI INI, 7 JANUARI telah <br>
 <li>rename read_inc menjadi read_inc_biodata</li>
 <li>mengupdate fieldBiodata di read inc_biodata.php</li>
 <li>mengupdate arrBiodata di read inc_biodata.php</li>
+<li>menyisipkan read_inc_biodata di index.php</li>
+<li>mengcopy paste edit.php menjadi edit_biodata.php</li>
 </ol>
