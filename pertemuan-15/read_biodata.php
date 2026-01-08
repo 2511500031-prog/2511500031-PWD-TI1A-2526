@@ -52,7 +52,7 @@
     <tr>
       <td><?= $i++ ?></td>
       <td>
-        <a href="edit.php?bid=<?= (int)$row['bid']; ?>">Edit</a>
+        <a href="edit_biodata.php?bid=<?= (int)$row['bid']; ?>">Edit</a>
         <a onclick="return confirm('Hapus <?= htmlspecialchars($row['bnama']); ?>?')" href="proses_delete.php?bid=<?= (int)$row['bid']; ?>">Delete</a>
       </td>
       <td><?= $row['bid']; ?></td>
