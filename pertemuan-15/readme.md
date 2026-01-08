@@ -30,4 +30,5 @@ HARI INI, 7 JANUARI telah <br>
 <li>copas from biodata dan ganti nama</li>
 <li>mengganti read.php diread_biodata.php menjadi read_biodata.php </li>
 <li>menganti proses_update.php menjadi proses_update_biodata.php</li>
+<li>mengupdate isi di proses_update_biodata.php</li>
 </ol>
