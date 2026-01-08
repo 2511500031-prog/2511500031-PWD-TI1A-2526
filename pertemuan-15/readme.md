@@ -12,5 +12,8 @@ HARI INI, 7 JANUARI telah <br>
 <li>mengganti flash_error menjadi flash error_biodata</li>
 <li>mengganti variabel kontak menjadi variabel sesuai tabel bioadata</li>
 <li>mengganti redirect_ke('index.php#contact')menjadi redirect_ke('index.php#biodata')<li>
+<li>mengganti nama form sesuai biodata</li>
+<li>menambahkan old menjadi old_biodata</li>
+<li>menambahkan isi old biodata<li>
 
 </ol>
