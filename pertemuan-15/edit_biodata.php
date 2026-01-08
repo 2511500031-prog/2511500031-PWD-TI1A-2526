@@ -126,7 +126,7 @@
         </div>
       <?php endif; ?>
 
-      <form action="proses_biodata.php" method="POST">
+      <form action="proses_update_biodata.php" method="POST">
         <input type="text" name="bid" value="<?= (int)$bid; ?>">
 
         <label for="txtNim"><span>NIM:</span>

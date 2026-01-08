@@ -32,47 +32,61 @@ $bkakak= bersihkan($_POST['txtNmKakakEd'] ?? '');
 $badik= bersihkan($_POST['txtNmAdikEd'] ?? '');
 
   #Validasi sederhana
-  $errors = []; #ini array untuk menampung semua error yang ada
+  $errors_biodata = []; #ini array untuk menampung semua error yang ada
 
-  if ($nama === '') {
-    $errors[] = 'Nama wajib diisi.';
-  }
+  if ($bnim === '') {
+  $errors_biodata[] = 'nim wajib diisi.';
+}
 
-  if ($email === '') {
-    $errors[] = 'Email wajib diisi.';
-  } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $errors[] = 'Format e-mail tidak valid.';
-  }
+if ($bnama === '') {
+  $errors_biodata[] = 'nama wajib diisi.';
+}
 
-  if ($pesan === '') {
-    $errors[] = 'Pesan wajib diisi.';
-  }
+if ($btempat_tinggal === '') {
+  $errors_biodata[] = 'tempat tinggal wajib diisi.';
+}
 
-  if ($captcha === '') {
-    $errors[] = 'Pertanyaan wajib diisi.';
-  }
-
-  if (mb_strlen($nama) < 3) {
-    $errors[] = 'Nama minimal 3 karakter.';
-  }
-
-  if (mb_strlen($pesan) < 10) {
-    $errors[] = 'Pesan minimal 10 karakter.';
-  }
-
-  if ($captcha!=="6") {
-    $errors[] = 'Jawaban '. $captcha.' captcha salah.';
-  }
+if ($btanggal_lahir === '') {
+  $errors_biodata[] = 'tanggal lahir wajib diisi.';
+}
+if ($bhobi === '') {
+  $errors_biodata[] = 'hobi wajib diisi.';
+}
+if ($bpekerjaan === '') {
+  $errors_biodata[] = 'Pekerjaan wajib diisi.';
+}
+if ($bpasangan=== '') {
+  $errors_biodata[] = 'Pasangan wajib diisi.';
+}
+if ($borang_tua === '') {
+  $errors_biodata[] = 'orang tua wajib diisi.';
+}
+if ($bkakak === '') {
+  $errors_biodata[] = 'kakak wajib diisi.';
+}
+if ($badik === '') {
+  $errors_biodata[] = 'adik wajib diisi.';
+}
+if (mb_strlen($bnama) < 3) {
+  $errors_biodata[] = 'Nama minimal 3 karakter.';
+}
 
   /*
   kondisi di bawah ini hanya dikerjakan jika ada error, 
   simpan nilai lama dan pesan error, lalu redirect (konsep PRG)
   */
   if (!empty($errors)) {
-    $_SESSION['old'] = [
-      'nama'  => $nama,
-      'email' => $email,
-      'pesan' => $pesan
+    $_SESSION['old_biodata'] = [
+      'nim'  => $bnim,
+    'nama' => $bnama,
+    'tempat_tinggal' => $btempat_tinggal,
+    'tanggal_lahir' => $btanggal_lahir,
+    'hobi' => $bhobi,
+    'pekerjaan' => $bpekerjaan,
+    'pasangan' => $bpasangan,
+    'orang_tua' => $borang_tua,
+    'kakak' => $bkakak,
+    'adik' => $badik,
     ];
 
     $_SESSION['flash_error_biodata'] = implode('<br>', $errors);
@@ -84,8 +98,7 @@ $badik= bersihkan($_POST['txtNmAdikEd'] ?? '');
     menyiapkan query UPDATE dengan prepared statement 
     (WAJIB WHERE bid = ?)
   */
-  $stmt = mysqli_prepare($conn, "UPDATE tbl_tamu 
-                                SET cnama = ?, cemail = ?, cpesan = ? 
+  $stmt = mysqli_prepare($conn, "UPDATE tabel_biodata                                SET cnama = ?, cemail = ?, cpesan = ? 
                                 WHERE bid = ?");
   if (!$stmt) {
     #jika gagal prepare, kirim pesan error (tanpa detail sensitif)
@@ -94,20 +107,27 @@ $badik= bersihkan($_POST['txtNmAdikEd'] ?? '');
   }
 
   #bind parameter dan eksekusi (s = string, i = integer)
-  mysqli_stmt_bind_param($stmt, "sssi", $nama, $email, $pesan, $bid);
+  mysqli_stmt_bind_param($stmt, "ssssssssssi", $bnim, $bnama, $btempat_tinggal, $btanggal_lahir, $bhobi, $bpekerjaan, $bpasangan, $borang_tua, $bkakak, $badik, $bid);
 
-  if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value
-    unset($_SESSION['old']);
+  if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old_biodata value
+    unset($_SESSION['old_biodata']);
     /*
       Redirect balik ke read_biodata.php dan tampilkan info sukses.
     */
     $_SESSION['flash_sukses'] = 'Terima kasih, data Anda sudah diperbaharui.';
     redirect_ke('read_biodata.php'); #pola PRG: kembali ke data dan exit()
-  } else { #jika gagal, simpan kembali old value dan tampilkan error umum
-    $_SESSION['old'] = [
-      'nama'  => $nama,
-      'email' => $email,
-      'pesan' => $pesan,
+  } else { #jika gagal, simpan kembali old_biodata value dan tampilkan error umum
+    $_SESSION['old_biodata'] = [
+      'nim'  => $bnim,
+    'nama' => $bnama,
+    'tempat_tinggal' => $btempat_tinggal,
+    'tanggal_lahir' => $btanggal_lahir,
+    'hobi' => $bhobi,
+    'pekerjaan' => $bpekerjaan,
+    'pasangan' => $bpasangan,
+    'orang_tua' => $borang_tua,
+    'kakak' => $bkakak,
+    'adik' => $badik,
     ];
     $_SESSION['flash_error_biodata'] = 'Data gagal diperbaharui. Silakan coba lagi.';
     redirect_ke('edit_biodata.php?bid='. (int)$bid);
