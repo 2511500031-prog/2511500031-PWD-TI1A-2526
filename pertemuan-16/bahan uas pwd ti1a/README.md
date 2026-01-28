@@ -8,4 +8,7 @@ HARI INI, 28 JANUARI telah mengerjakan UAS <br>
 <li>membuat tabel baru di phpmyadmin </li>
 <li>mengubah edit.php menjadi edit_biodata.php</li>
 <li>mengedit file edit_biodata.php</li>
+<li>mengedit index.php</li>
+<li>mengedit proses biodata.php<li>
+<li>menganti proses delete biodata</li>
 </ol>
