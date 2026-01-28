@@ -7,4 +7,5 @@ HARI INI, 28 JANUARI telah mengerjakan UAS <br>
 <li>memindahkan file dosen ke pertemuan 16</li>
 <li>membuat tabel baru di phpmyadmin </li>
 <li>mengubah edit.php menjadi edit_biodata.php</li>
+<li>mengedit file edit_biodata.php</li>
 </ol>
