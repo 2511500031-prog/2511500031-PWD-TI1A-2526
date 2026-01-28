@@ -5,5 +5,5 @@ HARI INI, 28 JANUARI telah mengerjakan UAS <br>
 <br>
 <ol>
 <li>memindahkan file dosen ke pertemuan 16</li>
-<li> </li>
+<li>membuat tabel baru di phpmyadmin </li>
 </ol>
