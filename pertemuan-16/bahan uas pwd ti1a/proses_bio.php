@@ -10,16 +10,12 @@ require_once __DIR__ . '/fungsi.php';
 */
 
 $arrBiodata = [
-  "kodedos" => $_POST["txtKodeDos"] ?? "",
-  "nama" => $_POST["txtNmDosen"] ?? "",
-  "alamat" => $_POST["txtAlRmh"] ?? "",
-  "tanggal" => $_POST["txtTglDosen"] ?? "",
-  "jja" => $_POST["txtJJA"] ?? "",
-  "prodi" => $_POST["txtProdi"] ?? "",
-  "nohp" => $_POST["txtNoHP"] ?? "",
-  "pasangan" => $_POST["txNamaPasangan"] ?? "",
-  "anak" => $_POST["txtNmAnak"] ?? "",
-  "ilmu" => $_POST["txtBidangIlmu"] ?? ""
+ 
+  "bnama" => $_POST["txtNmDosen"] ?? "",
+  "btempat_tinggal" => $_POST["txtAlRmh"] ?? "",
+  "tanggal_lahir" => $_POST["txtTglDosen"] ?? "",
+  "bhobi" => $_POST["txthobi"] ?? "",
+  "pekerjaan" => $_POST["txtpekerjaan"] ?? "",
 ];
 $_SESSION["biodata"] = $arrBiodata;
 
